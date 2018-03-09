@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    background: #444
+}
+
+a{
+    color: rgba(255, 255, 255, 0.5);
+}
+
+header{
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+li{
+    padding-bottom: 20px;
+}
+
+.bar a{
+    text-decoration: none;
+    color: white;
+}
+
+.bar li{
+    display: inline;
+    padding: 20px;
+}
+
+ul{
+    background: rgba(0, 0, 0, 1);
+    padding: 20px;
+}
+
+p{
+    font-size: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+h1{
+    color: rgba(255, 255, 255, 0.5);
+}
