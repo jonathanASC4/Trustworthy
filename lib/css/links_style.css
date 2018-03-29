@@ -28,9 +28,19 @@ li{
     padding-bottom: 20px;
 }
 
+.bar{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .bar a{
+    padding: 20px;
     text-decoration: none;
     color: white;
+}
+
+.bar a:hover{
+    background-color: white;
+    color: black;
 }
 
 .bar li{
