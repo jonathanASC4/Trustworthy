@@ -1,17 +1,17 @@
 body{
     margin: 0;
-    background: #444
+    background: #1a1a1a;
 }
 img{
     border: 7px solid black;
 }
 a{
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 0, 0, 0.6);
 }
 
 header{
   text-align: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 h3{
@@ -51,4 +51,11 @@ li{
 ul{
     background: rgba(0, 0, 0, 1);
     padding: 20px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.stuff{
+    margin-left: 70px;
+    margin-right: 70px;
 }

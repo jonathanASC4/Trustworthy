@@ -1,18 +1,26 @@
 body{
     margin: 0;
-    background: #444
+    background: #1a1a1a
 }
-  a{
-    color: rgba(255, 255, 255, 0.5);
-  }
-  h1{
-    font-size: 100px;
-    margin: 0px;
-    }
-  header{
-    text-align: center;
-    color: rgba(255, 255, 255, 0.5);
-  }
+
+a{
+  color: rgba(255, 0, 0, 0.6);
+}
+
+header{
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+h1{
+  font-size: 100px;
+  margin: 0;
+  font-family: "Arial Black", Gadget, sans-serif;
+  /* font-family: 'Alfa Slab One', cursive; */
+  border-bottom: 8px solid rgba(171, 0, 0, 1);
+  background-color: #CCCCCC;
+  color: #1a1a1a;
+}
   li{
       padding-bottom: 20px;
     }
@@ -40,4 +48,15 @@ body{
   ul{
       background: rgba(0, 0, 0, 1);
       padding: 20px;
+      margin-top: 0;
+      margin-bottom: 0;
     }
+
+h2{
+  font-size: 30px;
+  line-height: 1.6;
+}
+
+h3{
+  font-size: 25px;
+}
