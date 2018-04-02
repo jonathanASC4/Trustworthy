@@ -4,12 +4,12 @@ body{
 }
 
 a{
-    color: rgba(255, 0, 0, 0.6);
+    color: rgba(255, 0, 0, 0.8);
 }
 
 header{
   text-align: center;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 li{
@@ -58,18 +58,18 @@ p{
     padding-left: 40px;
     padding-right: 40px;
     text-align: center;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 h1{
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .claim{
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 10px;
-    /* border: 5px solid black; */
+    color: rgba(255, 255, 255, 0.8);
     border-radius: 20px;
     margin: 20px;
 }
@@ -108,5 +108,9 @@ button:hover{
 }
 
 .start {
+    text-align: center;
+}
+
+h2{
     text-align: center;
 }
