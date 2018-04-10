@@ -119,3 +119,17 @@ button:hover{
 h2{
     text-align: center;
 }
+
+form h1{
+    margin-bottom: 0px;
+}
+
+form input{
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 30px;
+    border: transparent;
+    text-align: center;
+    height: 40px;
+    width: 60px;
+    background-color: black;
+}
