@@ -1,0 +1,14 @@
+@import 'navbar.scss';
+@import 'skype.scss';
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body{
+    margin: 0;
+    background: #1a1a1a;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#donationTextBox{
+  text-decoration: none !important;
+  color: white !important,
+}
