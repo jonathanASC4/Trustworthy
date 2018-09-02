@@ -1,5 +1,6 @@
 import React from 'react';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import ReactHtmlParser, { processNodes, convertNodeToElement, htmlparser2 } from 'react-html-parser';
 import { Link } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
@@ -20,7 +21,6 @@ class Claim extends React.Component{
         this.state = {
             statements: ["a", "a", "a", "a", "a", "a", "a", "a", "a", "a"],
             claim1: <p>give us a moment</p>,
-            text: <p>getting desperate</p>
         }
         console.log("checking");
     }
@@ -54,17 +54,13 @@ class Claim extends React.Component{
         
     }
     render(){
-        if(this.state.claim1 !== undefined && this.state.text == <p>getting desperate</p>){
-            console.log(this.state.claim1);
-            this.setState({
-                text: this.state.claim1,
-            })
+        function createMarkup(){
+            return {__html: 'First &middot; Second'};
         }
         return(
             <div className="container2">
                 <div className="container1">
-                    
-                    <FormControlLabel control={<div>{this.state.claim1}</div>} />
+                    <FormControlLabel control={<div>{ReactHtmlParser(this.state.claim1)}</div>} />
                 </div>
             </div>
         )
