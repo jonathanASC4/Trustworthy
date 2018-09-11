@@ -31,7 +31,7 @@ class Claim extends React.Component{
         super();
         this.state = {
             statements: ["a", "a", "a", "a", "a", "a", "a", "a", "a", "a"],
-            attempt: [<p>I wanna try something</p>, <p>how does this work</p>],
+            die: <p>now</p>,
             testLength: 10,
             test: <button onClick={() => this.displayClaims()}>do the thing</button>,
             claim1: [],
@@ -39,12 +39,31 @@ class Claim extends React.Component{
         console.log("checking");
     }
 
+    returnPush(arr1, val){
+        var arr2 = arr1;
+        arr2.push(val);
+        return arr2;
+    }
+
     displayClaims(){
+        console.log("idk");
+        //ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement
+        //console.log(this.returnPush(this.state.claim1, ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement)));
+        this.setState({
+            claim1: <p>do something</p>, //this.returnPush(this.state.claim1, ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement)),
+            test: [<p>doing a thing</p>, <p>another thing</p>],
+            die: <p>please</p>,
+        })
+        
+        var temp = [];
+        for(var i=0; i<this.state.testLength; i++){
+            temp.push(ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement));
+        }
         
         this.setState({
-            test: this.state.claim1,
+            test: temp,
         })
-        console.log(this.state.claim1);
+        //console.log(this.state.claim1);
     }
 
     handleChange(event, field){
@@ -56,6 +75,7 @@ class Claim extends React.Component{
     speakerCheck(item, speaker_slug){
         return item.speaker.name_slug==speaker_slug && item.statement_type.statement_type !== "Flip";
     }
+    
     //https://randomuser.me/api/?results=500
     //https://www.politifact.com/api/statements/truth-o-meter/people/barack-obama/json/?n=100
     //http://politifact.com/api/v/2/statement/?format=[JSON]&order_by=-ruling_date&limit=1
@@ -71,6 +91,7 @@ class Claim extends React.Component{
             data=data.filter(function(item){return item.speaker.name_slug=="barack-obama" && item.statement_type.statement_type !== "Flip";});
             for(var i=0; i<10; i++){
                 arr.push(data.splice(Math.floor(Math.random()*data.length), 1)[0]);
+                //console.log(arr);
             }
             
             fetch(currentProxy+URL2)
@@ -81,6 +102,7 @@ class Claim extends React.Component{
                 data2=data2.filter(function(item){return item.speaker.name_slug=="hillary-clinton" && item.statement_type.statement_type !== "Flip";});
                 for(var i=0; i<10; i++){
                     arr.push(data2.splice(Math.floor(Math.random()*data2.length), 1)[0]);
+                    //console.log(arr);
                 }
 
                 fetch(currentProxy+URL3)
@@ -91,26 +113,17 @@ class Claim extends React.Component{
                     data3=data3.filter(function(item){return item.speaker.name_slug=="bernie-s" && item.statement_type.statement_type !== "Flip";});
                     for(var i=0; i<10; i++){
                         arr.push(data3.splice(Math.floor(Math.random()*data3.length), 1)[0]);
+                        //console.log(arr);
+                    }
+                    for(var i=0; i<arr.length; i++){
+                        console.log(arr[i]);
                     }
 
-                    function returnPush(arr, val){
-                        var arr2 = JSON.parse(JSON.stringify(arr));
-                        arr2.push(val);
-                        return arr2;
-                    }
+
 
                     this.setState({
                         statements: arr,
-                        claim1: ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement),
-                        claim2: ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement),
-                        claim3: ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement),
-                        claim4: ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement),
-                        claim5: ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement),
-                        claim6: ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement),
-                        claim7: ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement),
-                        claim8: ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement),
-                        claim9: ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement),
-                        claim10: ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement),
+                        
                     });
                     console.log(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement);
                 })
@@ -124,10 +137,11 @@ class Claim extends React.Component{
         return(
             <div className="container2">
                 <div className="container1">
-                    {/* {this.state.attempt} */}
-                    <TextField style={{ width: '30px', paddingLeft: '10px', backgroundColor: 'rgb(200, 200, 200)', borderRadius: '4px' }} value={this.state.testLength} onChange={(event) => {this.handleChange(event, 'testLength');}}/>
-                    <div>{this.state.claim1}</div>
-                    <div>{this.state.test}</div>
+                    <TextField style={{ width: '30px', paddingLeft: '10px', backgroundColor: 'rgb(200, 200, 200)', borderRadius: '4px' }}
+                    value={this.state.testLength}
+                    onChange={(event) => {this.handleChange(event, 'testLength');}}/>
+                    <br />
+                    {this.state.test}
                 </div>
             </div>
         )
@@ -145,7 +159,7 @@ class ChallengePage extends React.Component{
   }
   
   displayClaims(){
-      console.log("testing");
+    console.log(ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement));
       this.setState({
           content: <Claim />
       })
