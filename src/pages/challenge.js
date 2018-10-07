@@ -33,7 +33,7 @@ class Claim extends React.Component{
             statements: ["a", "a", "a", "a", "a", "a", "a", "a", "a", "a"],
             die: <p>now</p>,
             testLength: 10,
-            test: <button onClick={() => this.displayClaims()}>do the thing</button>,
+            test: <button onClick={() => this.displayClaimsDem()}>do the thing</button>,
             claim1: [],
         }
         console.log("checking");
@@ -45,7 +45,7 @@ class Claim extends React.Component{
         return arr2;
     }
 
-    displayClaims(){
+    displayClaimsDem(){
         console.log("idk");
         //ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement
         //console.log(this.returnPush(this.state.claim1, ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement)));
@@ -54,7 +54,7 @@ class Claim extends React.Component{
             test: [<p>doing a thing</p>, <p>another thing</p>],
             die: <p>please</p>,
         })
-        
+
         var temp = [];
         for(var i=0; i<this.state.testLength; i++){
             temp.push(ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement));
@@ -151,15 +151,15 @@ class Claim extends React.Component{
 class ChallengePage extends React.Component{
   state = {
     checked: true,
-    content: <button onClick={() => this.displayClaims()}>do the thing</button>
+    content: <button onClick={() => this.displayClaimsDem()}>do the thing</button>
   };
 
   componentDidMount() {
     window.scrollTo(0,0);
   }
   
-  displayClaims(){
-    console.log(ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement));
+  displayClaimsDem(){
+    //console.log(ReactHtmlParser(arr.splice(Math.floor(Math.random()*arr.length), 1)[0].statement));
       this.setState({
           content: <Claim />
       })
