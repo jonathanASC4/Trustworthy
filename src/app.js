@@ -39,7 +39,6 @@ import FormPage from './pages/form';
 import DonationPage from './pages/donation';
 import InterviewPage from './pages/interview';
 import FAQPage from './pages/faq';
-import IndexPage from './pages/index';
 import ChallengePage from './pages/challenge';
 
 /*
@@ -122,7 +121,6 @@ export default class App extends React.Component{
           <Route exact path="/donation" component={DonationPage} />
           <Route exact path="/interview" component={InterviewPage} />
           <Route exact path="/faq" component={FAQPage} />
-          <Route exact path="/index" component={IndexPage} />
           <Route exact path="/challenge" component={ChallengePage} />
         {/* <Footer /> */}
 			</div>

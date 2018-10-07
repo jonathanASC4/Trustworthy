@@ -18,24 +18,21 @@ const buttonStyle =
    textDecoration: 'none',
 }
 
-const clear = {
-  textDecoration: 'none',
+const headStyle={
+  fontSize: "7em",
+  paddingTop: "20px", 
+  height:"200px",
+  margin: "0 auto",
+  fontFamily: "'Arial Black', Gadget, sans-serif",
+  borderBottom: "8px solid rgba(171, 0, 0, 1)",
+  backgroundColor: "#CCCCCC",
+  color: "#1a1a1a",
 }
 
-const titleTextStyle =
-{
-  color: '#527a7a',
-  fontFamily: 'Raleway',
-}
-const homeBox={
-  padding: '2em',
-  margin: '1em',
-}
-
-const topHomeBox={
-  margin: 'auto',
-  padding: '4em',
-  height: '25%',
+const paraStyle={
+  fontSize: "1.3em",
+  marginBottom: "5px",
+  lineHeight: "50px"
 }
 
 class HomePage extends React.Component{
@@ -54,152 +51,15 @@ class HomePage extends React.Component{
       const { checked } = this.state;
 
 	return(
-	    <div>
-        <Parallax
-          blur={1}
-          bgImage={require('../images/background.png')}
-          bgImageAlt="the background"
-          strength={0}
-        >
-
-
-        <div>
-        <Grow in={checked}>
-          <Typography variant="display4" style={titleTextStyle} component="h1">
-            <center>
-            <br/>
-            <br/>
-            Hire.me
-            </center>
-          </Typography>
-        </Grow>
-        <Grow in={checked} style={{ transitionDelay: checked ? 500 : 0 }}>
-          <Typography variant="display2" component="p" style={font}>
-            <center>
-            Live College and Job Interview Counseling
-            </center>
-          </Typography>
-          </Grow>
-        <Grow in={checked} style={{ transitionDelay: checked ? 1000 : 0 }}>
-            <Grid item xs={12}>
-              <center>
-              <Link to ="/about" id="about" style={clear}>
-                <Button size="large" style = {buttonStyle} variant="contained" className={HomePage.button}>
-                  LEARN MORE
-                </Button>
-              </Link>
-              <Link to ="/form" id="form" style={clear}>
-                <Button size="large" style = {buttonStyle} variant="contained" className={HomePage.button}>
-                  SCHEDULE A MEETING
-                </Button>
-              </Link>
-              <Link to="/browse" id="browse" style={clear}>
-                <Button size="large" style = {buttonStyle} variant="contained" className={HomePage.button}>
-                  BROWSE COUNSELORS
-                </Button>
-              </Link>
-              </center>
-            </Grid>
-          </Grow>
-        </div>
-        <div style={{ height: '25em' }} />
-
-        </Parallax>
-
-        <Parallax
-          blur={0}
-          bgImage={require('../images/background2.jpg')}
-          bgImageAlt="the interview"
-          strength={0}
-        >
-
-        <div>
-
-          <Typography variant="display3" style={titleTextStyle} component="h1">
-            <center>
-            <br/>
-            <br/>
-            What Will Hire.me Mean to You?
-            </center>
-            <br/>
-          </Typography>
-          <Grid container spacing={24}>
-            <Grid item xs>
-              <Paper style={homeBox}>
-
-          <center>
-          <Avatar src="http://teenleadershipfoundation.com/wp-content/uploads/2014/01/mentorlogo2-011.png" size={1000} backgroundColor="rgba(0,0,0,0)"
-			style={{
-				width: 200,
-     			height: 200,
-     			marginRight: 10,
-     			marginBottom: 12,
-     			marginTop: 12}}
-		/>
-		</center>
-                <Typography variant="headline" component="h3" style={titleTextStyle}>
-                  <center>
-                    One-on-One Mentorship
-		               <Typography variant="subheading" style={titleTextStyle} gutterBottom>
-        	          Here, you can be paired with a counselor. Our counselors all have different skillsets - scholarships, financial aid, finding suitable programs, and more! Begin your road to success starting now!
-      		         </Typography>
-                </center>
-                </Typography>
-              </Paper>
-            </Grid>
-            <Grid item xs>
-              <Paper style={homeBox}>
-
-          <center>
-          <Avatar src="https://kaggle2.blob.core.windows.net/competitions/kaggle/6733/logos/front_page.png" size={1000} backgroundColor="rgba(0,0,0,0)"
-			style={{
-				width: 200,
-     			height: 200,
-     			marginRight: 10,
-     			marginBottom: 12,
-     			marginTop: 12}}
-				/>
-			</center>
-
-                <Typography variant="headline" component="h3" style={titleTextStyle}>
-                  <center>
-                    Emotion Analysis
-		                <Typography variant="subheading" style={titleTextStyle} gutterBottom>
-        	           A tool that can be specifically used for interviews. What does it do, you ask? It analyzes emotions - hence the name "Emotion Analysis" - and gives you feedback on what you should do during the scenario of an interview. Although this may not seem like much help, we can guarantee that will be one of the factors taken into by the interviewer.
-      		          </Typography>
-                  </center>
-                </Typography>
-              </Paper>
-            </Grid>
-            <Grid item xs>
-              <Paper style={homeBox}>
-
-		<center>
-          <Avatar src="https://www.wired.com/images_blogs/business/2011/06/Picture-2-300x287.png" size={1000} backgroundColor="rgba(0,0,0,0)"
-			style={{
-				width: 200,
-     			height: 200,
-     			marginRight: 10,
-     			marginBottom: 12,
-     			marginTop: 12}}
-				/>
-			</center>
-                <Typography variant="headline" component="h3" style={titleTextStyle}>
-                  <center>
-                  Personal Feedback
-		              <Typography variant="subheading" style={titleTextStyle} gutterBottom>
-        	         A page that is designed for another way to communicate with your personal counselor. Your counselor can give you advice for passing exams, achieving scholarships, and making plans for college.
-      		        </Typography>
-                  </center>
-                </Typography>
-              </Paper>
-            </Grid>
-          </Grid>
-
-        </div>
-        <div style={{ height: '25em' }} />
-
-        </Parallax>
+	    <div style={{"textAlign": "center"}}>
+        <h1 style={headStyle}>Trustworthy</h1>
+      <div style={paraStyle}>
+        <h2>Your people wouldn't lie to you. They're honest. <br /> The only honest people in this country. <br /> They tell it like it is, and that's that.</h2>
+        <h3>That's what they keep saying, anyway.</h3>
+        <h2>How much of what "your people" say is a flat-out lie?</h2>
+        <h2><a style={{"color": "rgb(230, 0, 0)"}} href='/challenge'>Care to test yourself and find out?</a></h2>
+      </div>
+      
 	    </div>
 	)
     }
