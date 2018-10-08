@@ -9,117 +9,105 @@ import { Parallax, Background } from 'react-parallax';
 import Paper from '@material-ui/core/Paper';
 import Grow from '@material-ui/core/Grow';
 import Media from 'react-media';
+import MetaTags from 'react-meta-tags';
 
-const titleTextStyle =
+const buttonStyle =
 {
-  color: '#FFFFFF',
-  padding: "10px",
-  width: "70%",
+   padding: '1em 2em',
+   margin: '5em',
+   fontFamily: 'Raleway',
+   textDecoration: 'none',
+}
+
+const headStyle={
+  fontSize: "4em",
+  paddingTop: "40px", 
+  paddingBottom: "40px",
   margin: "0 auto",
-  fontFamily: 'Raleway',
+  fontFamily: "'Arial Black', Gadget, sans-serif",
+  borderBottom: "8px solid rgba(171, 0, 0, 1)",
+  backgroundColor: "#CCCCCC",
+  color: "#1a1a1a",
 }
-const aboutBox={
-  margin: 'auto',
-  padding: '4em',
-  height: '25%',
+
+const headStyle2={
+  fontSize: "2em",
+  paddingTop: "40px", 
+  paddingBottom: "40px",
+  margin: "0 auto",
+  fontFamily: "'Arial Black', Gadget, sans-serif",
+  borderBottom: "8px solid rgba(171, 0, 0, 1)",
+  backgroundColor: "#CCCCCC",
+  color: "#1a1a1a",
 }
-const font ={
-  fontFamily: 'Raleway',
+
+const paraStyle={
+  fontSize: "1.3em",
+  marginBottom: "5px",
+  lineHeight: "50px"
 }
 
 class AboutPage extends React.Component{
   state = {
     checked: true,
   };
+
+  componentDidMount() {
+    window.scrollTo(0,0)
+  }
+  
     render(){
-       const { checked } = this.state;  
+      const font ={
+        fontFamily: 'Raleway',
+      }
+      const { checked } = this.state;
 
 	return(
-	    <div>
-
-
-	     <Parallax
-	        blur={10}
-	        bgImage={require('../images/aboutBack.jpeg')}
-	        bgImageAlt="Browse Page background"
-	        strength={100}
-	      >
-        <div>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-          <Media query="(max-width: 815px)">
+	    <div style={{"textAlign": "center"}}>
+        <MetaTags>
+          <title>About Trustworthy</title>
+        </MetaTags>
+        <Media query="(max-width: 819px)">
           {matches =>
             matches ? (
-              <Typography variant="display5" style={titleTextStyle} component="h1">
-                <center style={{"border": "transparent", "margin-top": "10%", "background": "rgba(100, 100, 100, 0.5)", "border-radius": "10px", "padding-bottom": "10px"}}>
-                  About 
-                </center>
-              </Typography>
+              <h1 style={headStyle2}>About Trustworthy</h1>
             ) : (
-              <Typography variant="display4" style={titleTextStyle} component="h1">
-                <center style={{"border": "transparent", "margin-top": "10%", "background": "rgba(100, 100, 100, 0.5)", "border-radius": "10px", "padding-bottom": "10px"}}>
-                  About 
-                </center>
-              </Typography>
+              <h1 style={headStyle}>About Trustworthy</h1>
             )
           }
         </Media>
-        </div>
-        <div style={{ height: '10em' }} />
-    		</Parallax>
-
-        <br />
-      <Paper style={aboutBox}>
-        <center>
-        <Grow in={checked} style={{ transitionDelay: checked ? 500 : 0 }}>
-          <Typography variant="display2" style={font} gutterBottom>THE TEAM</Typography>
-          </Grow>
-           <Grow in={checked} style={{ transitionDelay: checked ? 800 : 0 }}>
-          <Typography variant="subheading" style={font} gutterBottom>
-            <b>
-            Hire.me is a service geared towards providing underpriviledged students with the skills necessary to ace their college and job interviews.
-            With emotion analysis software, one on one mentorship, and personalized feedback, Hire.me aims to cultivate the next generation of African
-            American leaders in the workforce.
-
-            </b>
-          </Typography>
-          </Grow>
-          <br/>
-          <Grow in={checked} style={{ transitionDelay: checked ? 500 : 0 }}>
-          <Typography variant="display2" style={font} gutterBottom>WHAT ARE WE WORKING ON?</Typography>
-          </Grow>
-          <Grow in={checked} style={{ transitionDelay: checked ? 800 : 0 }}>
-          <Typography variant="subheading" style={font} gutterBottom>
-            <b>
-      			We are working to help the talents of color by utilizing natural language processing, collaborative filtering,
-      			and emotion analysis technology to educate those on how to effectively present themselves in all settings.
-            </b>
-          </Typography>
-          </Grow>
-
-          <br/>
-
-          <Grow in={checked} style={{ transitionDelay: checked ? 500 : 0 }}>
-          <Typography variant="display2" style={font} gutterBottom>
-            OUR MISSION
-          </Typography>
-          </Grow>
-          <Grow in={checked} style={{ transitionDelay: checked ? 800 : 0 }}>
-          <Typography variant="subheading" style={font} gutterBottom>
-            <b>
-            Leveraging emerging technology to empower, rather than displace, talent of color.
-            </b>
-          </Typography>
-          </Grow>
-          
-        </center>
-      </Paper>
+        
+        <div style={{"width": "80%", "margin": "0 auto", "font-size": "1.2em"}}>
+        <h1>Being critical of information is important.</h1>
+         <p>
+            Modern politics enables people to construct echo chambers, believing anything they hear from their end of the political spectrum and
+            nothing from the other side. <a style={{"color":"rgb(230, 0, 0)"}} href='https://www.statista.com/statistics/620117/fake-crime-news-facebook-engagement/'>According to
+            Politico,</a> 46 percent of Americans believe that the mainstream news media outright invents stories, despite the fact that they
+            are typically accompanied by video evidence of the story. Modern Americans do not want to face any hard realities that
+            contradict their worldview.
+          </p>
+          <p>
+            This has had devastating consequences. <a style={{"color":"rgb(230, 0, 0)"}} href='https://www.nytimes.com/2016/12/05/us/pizzagate-comet-ping-pong-edgar-maddison-welch.html'>In 2016,</a> Edgar Welch opened
+            fire on a Comet Ping Pong pizzeria, believing that it had the core of a pedophile ring in its basement (despite the fact that the
+            building did not have a basement). He believed in "Pizzagate," an online conspiracy theory, that, despite having no evidence,
+            convinced <a style={{"color":"rgb(230, 0, 0)"}} href=
+            'https://www.publicpolicypolling.com/polls/trump-remains-unpopular-voters-prefer-obama-on-scotus-pick/'>over 9 million
+            voters.</a> Thankfully, no one was hurt, but someone easily could have been. The total willingness of people to believe anything
+            they choose to hear can lead to violence.
+          </p>
+          <p>
+              People must be more critical of their information sources, especially the ones they trust most. Even major media outlets can get
+              details wrong.
+          </p>
+          <p>
+              Trustworthy is an attempt to show people that a bubble is not a reliable source. Unfavorable facts are still facts, and a falsehood
+              is not made true by persistent belief in it.
+          </p>
+          </div>
+      
 	    </div>
-
 	)
     }
 };
+
 export default AboutPage

@@ -38,6 +38,7 @@
     "react-mailto": "^0.4.0",
     "react-materialize": "^2.4.5",
     "react-media": "^1.8.0",
+    "react-meta-tags": "^0.7.1",
     "react-parallax": "^1.8.0",
     "react-protected-mailto": "^1.0.3",
     "react-redux": "^5.0.7",

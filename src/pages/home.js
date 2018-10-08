@@ -9,6 +9,7 @@ import NavBar from '../components/navbar.js';
 import Footer from '../components/footer.js';
 import Grow from '@material-ui/core/Grow';
 import Avatar from '@material-ui/core/Avatar';
+import MetaTags from 'react-meta-tags';
 
 const buttonStyle =
 {
@@ -52,8 +53,11 @@ class HomePage extends React.Component{
 
 	return(
 	    <div style={{"textAlign": "center"}}>
+        <MetaTags>
+          <title>Trustworthy</title>
+        </MetaTags>
         <h1 style={headStyle}>Trustworthy</h1>
-      <div style={paraStyle}>
+        <div style={paraStyle}>
         <h2>Your people wouldn't lie to you. They're honest. <br /> The only honest people in this country. <br /> They tell it like it is, and that's that.</h2>
         <h3>That's what they keep saying, anyway.</h3>
         <h2>How much of what "your people" say is a flat-out lie?</h2>

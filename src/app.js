@@ -118,8 +118,6 @@ export default class App extends React.Component{
           <Route exact path="/settings" component={SettingsPage} />
           <Route exact path="/profile" component={ProfilePage} />
           <Route exact path="/form" component={FormPage} />
-          <Route exact path="/donation" component={DonationPage} />
-          <Route exact path="/interview" component={InterviewPage} />
           <Route exact path="/faq" component={FAQPage} />
           <Route exact path="/challenge" component={ChallengePage} />
         {/* <Footer /> */}

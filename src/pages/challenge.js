@@ -12,6 +12,7 @@ import Footer from '../components/footer.js';
 import Grow from '@material-ui/core/Grow';
 import Avatar from '@material-ui/core/Avatar';
 import TextField from '@material-ui/core/TextField';
+import MetaTags from 'react-meta-tags';
 
 const proxyURL = "https://stark-beyond-49493.herokuapp.com/";
 const currentProxy = "https://cors-anywhere.herokuapp.com/";
@@ -172,6 +173,9 @@ class ChallengePage extends React.Component{
       const { checked } = this.state;
 	return(
 	    <div style={{"textAlign": "center"}}>
+            <MetaTags>
+                <title>Trustworthy Challenge</title>
+            </MetaTags>
             <p>Which political party do you identify with?</p>
             <Claim />
 	    </div>
