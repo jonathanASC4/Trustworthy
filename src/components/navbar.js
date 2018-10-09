@@ -106,15 +106,15 @@ class NavBar extends React.Component {
             </ListItem>
           </Link>
 
-          <Link to="/contact" style={fontAndColorInverse}>
+          <Link to="/tips" style={fontAndColorInverse}>
             <ListItem>
-              Contact
+              Fact-Checking Tips
             </ListItem>
           </Link>
 
-          <Link to="/donation" style={fontAndColorInverse}>
+          <Link to="/challenge" style={fontAndColorInverse}>
             <ListItem>
-              Donate
+              Take the Quiz
             </ListItem>
           </Link>
 
@@ -143,33 +143,15 @@ class NavBar extends React.Component {
             </ListItem>
           </Link>
 
-          <Link to="/contact" style={fontAndColorInverse}>
+          <Link to="/tips" style={fontAndColorInverse}>
             <ListItem>
-              Contact
+              Fact-Checking Tips
             </ListItem>
           </Link>
 
-          <Link to="/donation" style={fontAndColorInverse}>
+          <Link to="/challenge" style={fontAndColorInverse}>
             <ListItem>
-              Donate
-            </ListItem>
-          </Link>
-
-          <Link to="/form" style={fontAndColorInverse}>
-            <ListItem>
-              Get Started
-            </ListItem>
-          </Link>
-
-          <Link to="/browse" style={fontAndColorInverse}>
-            <ListItem>
-              Counselors
-            </ListItem>
-          </Link>
-
-          <Link to="/interview" style={fontAndColorInverse}>
-            <ListItem>
-              Interview
+              Take the Quiz
             </ListItem>
           </Link>
 
@@ -206,27 +188,15 @@ class NavBar extends React.Component {
             </ListItem>
           </Link>
 
-          <Link to="/contact" style={fontAndColorInverse}>
+          <Link to="/tips" style={fontAndColorInverse}>
             <ListItem>
-              Contact
+              Fact-Checking Tips
             </ListItem>
           </Link>
 
-          <Link to="/donation" style={fontAndColorInverse}>
+          <Link to="/challenge" style={fontAndColorInverse}>
             <ListItem>
-              Donate
-            </ListItem>
-          </Link>
-
-          <Link to="/form" style={fontAndColorInverse}>
-            <ListItem>
-              Get Started
-            </ListItem>
-          </Link>
-
-          <Link to="/interview" style={fontAndColorInverse}>
-            <ListItem>
-              Interview
+              Take the Quiz
             </ListItem>
           </Link>
 
@@ -267,12 +237,12 @@ class NavBar extends React.Component {
             <Button color="inherit" style={fontAndColor}>About</Button>
           </Link>
 
-          <Link to="/contact" id="contact">
-            <Button color="inherit" style={fontAndColor}>Contact</Button>
+          <Link to="/tips" id="donation">
+            <Button color="inherit" style={fontAndColor}>Fact-Checking Tips</Button>
           </Link>
 
-          <Link to="/donation" id="donation">
-            <Button color="inherit" style={fontAndColor}>Donate</Button>
+          <Link to="/challenge" id="contact">
+            <Button color="inherit" style={fontAndColor}>Take the Quiz</Button>
           </Link>
 
           <Link to="/login" id="login">
@@ -308,24 +278,12 @@ class NavBar extends React.Component {
               <Button color="inherit" style={fontAndColor}>About</Button>
             </Link>
 
-            <Link to="/contact" id="contact">
-              <Button color="inherit" style={fontAndColor}>Contact</Button>
+            <Link to="/tips" id="donation">
+              <Button color="inherit" style={fontAndColor}>Fact-Checking Tips</Button>
             </Link>
 
-            <Link to="/donation" id="donation">
-              <Button color="inherit" style={fontAndColor}>Donate</Button>
-            </Link>
-
-            <Link to="/form" id="form">
-              <Button color="inherit" style={fontAndColor}>Get Started</Button>
-            </Link>
-
-            <Link to="/browse" id="browse">
-              <Button color="inherit" style={fontAndColor}>Counselors</Button>
-            </Link>
-
-            <Link to="/interview" id="interview">
-              <Button color="inherit" style={fontAndColor}>Interview</Button>
+            <Link to="/challenge" id="contact">
+              <Button color="inherit" style={fontAndColor}>Take the Quiz</Button>
             </Link>
 
             <Button
@@ -383,20 +341,12 @@ class NavBar extends React.Component {
               <Button color="inherit" style={fontAndColor}>About</Button>
             </Link>
 
-            <Link to="/contact" id="contact">
-              <Button color="inherit" style={fontAndColor}>Contact</Button>
+            <Link to="/tips" id="about">
+              <Button color="inherit" style={fontAndColor}>Fact-Checking Tips</Button>
             </Link>
 
-            <Link to="/donation" id="donation">
-              <Button color="inherit" style={fontAndColor}>Donate</Button>
-            </Link>
-
-            <Link to="/form" id="form">
-              <Button color="inherit" style={fontAndColor}>Get Started</Button>
-            </Link>
-
-            <Link to="/interview" id="interview">
-              <Button color="inherit" style={fontAndColor}>Interview</Button>
+            <Link to="/challenge" id="about">
+              <Button color="inherit" style={fontAndColor}>Take the Quiz</Button>
             </Link>
 
             <Button
